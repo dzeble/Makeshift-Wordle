@@ -1,0 +1,462 @@
+#:kivy 2.0.0
+
+
+<MyLayout>
+    
+
+
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+       
+    
+        Label:
+            id: topLabel
+            halign: "center"
+            valign: "top"
+            #text: 'Wordeez'
+            text: ''
+            size_hint: (1, 0.15)
+            font_size: 32 
+
+        #TextInput:
+            #halign: "center"
+            #valign: "top"
+            #text: ''
+            #size_hint: (1, 0.15)
+            #font_size: 32 
+        
+
+
+        GridLayout:
+            
+        
+            cols: 5
+            rows: 8
+
+            padding: 75
+            spacing: 10
+
+          
+            
+      
+
+#row 1
+            TextInput:
+                id: spot1
+                markup: True
+                #this is to make sure the input text is in all caps
+                text: self.text.upper()if self.text is not None else''
+                multiline: False
+                write_tab: False
+                focus: True
+                #to move to the next text box
+                ##on_text_validate: spot2.focus =True
+                ##on_text_validate: spot2.disabled = False
+                font_size: 30
+                size_hint: (1.25, 1.5 )#0.2   0.4
+                background_color:(1,0.3,1,1)
+                #limit the text input to only one character
+                ##on_text: self.readonly = True if len(self.text.strip()) == 1 else False
+                on_text: spot2.focus =True
+                on_text: spot2.disabled = False
+
+            TextInput:
+                id: spot2
+                text: self.text.upper()if self.text is not None else''
+                multiline: False
+                write_tab: False
+                font_size: 30
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot3.focus =True
+                on_text: spot3.disabled = False
+                
+
+            TextInput:
+                id: spot3
+                text: self.text.upper()if self.text is not None else''
+                multiline: False
+                write_tab: False
+                font_size: 30
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot4.focus =True
+                on_text: spot4.disabled = False
+
+            
+            TextInput:
+                id: spot4
+                text: self.text.upper()if self.text is not None else''
+                multiline: False
+                write_tab: False
+                font_size: 30
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot5.focus =True
+                on_text: spot5.disabled = False
+
+            TextInput:
+                id: spot5
+                text: self.text.upper()if self.text is not None else''
+                multiline: False
+                multiline: False
+                write_tab: False
+                on_text_validate: spot6.focus =True
+                on_text_validate: root.test()
+                font_size: 30
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                
+
+
+#row 2
+                
+            TextInput:
+                id: spot6
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot7.focus =True
+                on_text: spot7.disabled = False
+
+            TextInput:
+                id: spot7
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot8.focus =True
+                on_text: spot8.disabled = False
+
+            TextInput:
+                id: spot8
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot9.focus =True
+                on_text: spot9.disabled = False
+
+            
+            TextInput:
+                id: spot9
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot10.focus =True
+                on_text: spot10.disabled = False
+
+            TextInput:
+                id: spot10
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                on_text_validate: spot11.focus =True
+                on_text_validate: root.test()
+                size_hint: (1.25, 1.5)
+                background_color:(1,0.3,1,1)
+                disabled: True
+
+
+#row 3
+                
+            TextInput:
+                id: spot11
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5)
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot12.focus =True
+                on_text: spot12.disabled = False
+
+            TextInput:
+                id: spot12
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5)
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot13.focus =True
+                on_text: spot13.disabled = False
+
+            TextInput:
+                id: spot13
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot14.focus =True
+                on_text: spot14.disabled = False
+
+            
+            TextInput:
+                id: spot14
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot15.focus =True
+                on_text: spot15.disabled = False
+
+            TextInput:
+                id: spot15
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                on_text_validate: spot16.focus =True
+                on_text_validate: root.test()
+                size_hint: (1.25, 1.5)
+                background_color:(1,0.3,1,1)
+                disabled: True
+
+
+
+#row 4
+                
+            TextInput:
+                id: spot16
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot17.focus =True
+                on_text: spot17.disabled = False
+
+            TextInput:
+                id: spot17
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot18.focus =True
+                on_text: spot18.disabled = False
+
+            TextInput:
+                id: spot18
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot19.focus =True
+                on_text: spot19.disabled = False
+
+            
+            TextInput:
+                id: spot19
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot20.focus =True
+                on_text: spot20.disabled = False
+
+            TextInput:
+                id: spot20
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                on_text_validate: spot21.focus =True
+                on_text_validate: root.test()
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+
+
+
+
+#row 5
+                
+            TextInput:
+                id: spot21
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot22.focus =True
+                on_text: spot22.disabled = False
+
+            TextInput:
+                id: spot22
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot23.focus =True
+                on_text: spot23.disabled = False
+
+            TextInput:
+                id: spot23
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot24.focus =True
+                on_text: spot24.disabled = False
+
+            
+            TextInput:
+                id: spot24
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot25.focus =True
+                on_text: spot25.disabled = False
+
+            TextInput:
+                id: spot25
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                on_text_validate: spot26.focus =True
+                on_text_validate: root.test()
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+
+
+
+
+#row 6
+                
+            TextInput:
+                id: spot26
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot27.focus =True
+                on_text: spot27.disabled = False
+
+            TextInput:
+                id: spot27
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot28.focus =True
+                on_text: spot28.disabled = False
+
+            TextInput:
+                id: spot28
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot29.focus =True
+                on_text: spot29.disabled = False
+
+            
+            TextInput:
+                id: spot29
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+                on_text: spot30.focus =True
+                on_text: spot30.disabled = False
+
+            TextInput:
+                id: spot30
+                text: self.text.upper()if self.text is not None else''
+                font_size: 30
+                multiline: False
+                write_tab: False
+                on_text_validate: root.test()
+                size_hint: (1.25, 1.5 )
+                background_color:(1,0.3,1,1)
+                disabled: True
+
+
+            #BoxLayout:
+            #orientation: 'horizontal'
+            #size: root.width, root.height
+
+#rerun button (work in progress)
+
+            #Button:
+                #text: 'ENTER'
+                #pos_hint: { 'x': 0.1} 
+                #size_hint: (0.2,0.4)
+                #font_size: 15
+                #on_press: root.playAgain()
+
+            
+
+               
+                
+
+
+            
+            
+        
